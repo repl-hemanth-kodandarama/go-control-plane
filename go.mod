@@ -1,4 +1,4 @@
-module github.com/repl-hemanth-kodandarama/go-control-plane2
+module github.com/repl-hemanth-kodandarama/go-control-plane
 
 go 1.11
 
