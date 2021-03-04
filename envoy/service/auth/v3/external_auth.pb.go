@@ -155,7 +155,7 @@ func (x *DeniedHttpResponse) GetBody() string {
 }
 
 // HTTP attributes for an OK response.
-// [#next-free-field: 7]
+// [#next-free-field: 8]
 type OkHttpResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -196,6 +196,8 @@ type OkHttpResponse struct {
 	// to the downstream client on success. Note that the :ref:`append field in HeaderValueOption <envoy_v3_api_field_config.core.v3.HeaderValueOption.append>`
 	// defaults to false when used in this message.
 	ResponseHeadersToAdd []*v31.HeaderValueOption `protobuf:"bytes,6,rep,name=response_headers_to_add,json=responseHeadersToAdd,proto3" json:"response_headers_to_add,omitempty"`
+	// This field allows the authorization service to remove HTTP response headers
+	ResponseHeadersToRemove []string `protobuf:"bytes,7,rep,name=response_headers_to_remove,json=responseHeadersToRemove,proto3" json:"response_headers_to_remove,omitempty"`
 }
 
 func (x *OkHttpResponse) Reset() {
